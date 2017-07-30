@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="author" content="sharoj Pokharel">
+	<title>Assignment color guess javascript. </title>
+	
+</head>
+<body  onload="doGame()">
+
+	<script >
+	var isFinished=false;
+	var target;
+	var guessInput;
+	var color=["red","green","yellow","black","brown","blue","orange","purple","pink","silver","gray","violet"]
+function doGame(){
+	var randomNumber= Math.random()*12;
+	var targetIndex= Math.floor(randomNumber);
+	color.sort();
+	targetColor= color[targetIndex];
+	alert("for developer refrence target color is:  "+ targetColor);
+	
+	while(!isFinished){
+		guessInput=prompt("Enter your guess color from this list:\n" + color );
+		if(guessInput == targetColor){
+			alert("congratulation you make a correct guess.")
+			isFinished=true;
+		}
+	
+	
+	}
+}
+	</script>
+
+</body>
+<html>
